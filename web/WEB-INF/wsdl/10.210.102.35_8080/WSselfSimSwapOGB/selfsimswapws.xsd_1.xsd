@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservice.selfsimswap.ogb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservice.selfsimswap.ogb/">
+
+<xs:element name="getCustomer" type="tns:getCustomer"/>
+
+<xs:element name="getCustomerResponse" type="tns:getCustomerResponse"/>
+
+<xs:element name="getCustomerSecretCode" type="tns:getCustomerSecretCode"/>
+
+<xs:element name="getCustomerSecretCodeResponse" type="tns:getCustomerSecretCodeResponse"/>
+
+<xs:element name="getCustomerTrustNumbers" type="tns:getCustomerTrustNumbers"/>
+
+<xs:element name="getCustomerTrustNumbersResponse" type="tns:getCustomerTrustNumbersResponse"/>
+
+<xs:element name="getPuk" type="tns:getPuk"/>
+
+<xs:element name="getPuk2" type="tns:getPuk2"/>
+
+<xs:element name="getPuk2Response" type="tns:getPuk2Response"/>
+
+<xs:element name="getPukResponse" type="tns:getPukResponse"/>
+
+<xs:element name="updateCodeSecret" type="tns:updateCodeSecret"/>
+
+<xs:element name="updateCodeSecretResponse" type="tns:updateCodeSecretResponse"/>
+
+<xs:element name="updateCustomerTrustNumber1" type="tns:updateCustomerTrustNumber1"/>
+
+<xs:element name="updateCustomerTrustNumber1Response" type="tns:updateCustomerTrustNumber1Response"/>
+
+<xs:element name="updateCustomerTrustNumber2" type="tns:updateCustomerTrustNumber2"/>
+
+<xs:element name="updateCustomerTrustNumber2Response" type="tns:updateCustomerTrustNumber2Response"/>
+
+<xs:element name="updateCustomerTrustNumber3" type="tns:updateCustomerTrustNumber3"/>
+
+<xs:element name="updateCustomerTrustNumber3Response" type="tns:updateCustomerTrustNumber3Response"/>
+
+<xs:complexType name="updateCodeSecret">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="currentCode" type="xs:string" minOccurs="0"/>
+<xs:element name="newCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCodeSecretResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPuk">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPukResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:ogbPukEntite" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ogbPukEntite">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="puk" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerSecretCode">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerSecretCodeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:selfSimSwapEntite" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="selfSimSwapEntite">
+<xs:sequence>
+<xs:element name="code" type="xs:int"/>
+<xs:element name="codesecret" type="xs:string" minOccurs="0"/>
+<xs:element name="datedelivrancepiece" type="xs:string" minOccurs="0"/>
+<xs:element name="datedenaissance" type="xs:string" minOccurs="0"/>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="nom" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroconf1" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroconf2" type="xs:string" minOccurs="0"/>
+<xs:element name="numeroconf3" type="xs:string" minOccurs="0"/>
+<xs:element name="numeropieceidentite" type="xs:string" minOccurs="0"/>
+<xs:element name="prenom" type="xs:string" minOccurs="0"/>
+<xs:element name="typepieceidentite" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPuk2">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="secretCode" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPuk2Response">
+<xs:sequence>
+<xs:element name="return" type="tns:ogbPukEntite" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber1">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="currentTrustNumb1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber1Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerTrustNumbers">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerTrustNumbersResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:selfSimSwapEntite" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber2">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="currentTrustNumb2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber2Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomer">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCustomerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:selfSimSwapEntite" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber3">
+<xs:sequence>
+<xs:element name="msisdn" type="xs:string" minOccurs="0"/>
+<xs:element name="currentTrustNumb3" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateCustomerTrustNumber3Response">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
